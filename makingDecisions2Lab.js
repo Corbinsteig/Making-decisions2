@@ -7,14 +7,21 @@ var arr = [10,20,30,40,50,60]
 */
 
 //Code Here
-
-
+let firstItem = arr[0]
+console.log(firstItem)
 ////////// PROBLEM 2 //////////
 /*
   Remove the last item from the 'arr' array and store it in a variable named 'lastItemRemoved'. Console.log the array to verify you no longer have the last item.
 */
 
 //Code Here
+let lastItemRemoved = arr.splice(5,1)
+console.log(lastItemRemoved)
+console.log(arr)
+
+//let lastItemRemoved = arr.pop()
+//console.log(lastItemRemoved)
+
 
 ////////// PROBLEM 3 //////////
 
@@ -27,7 +34,9 @@ var family = ['Tyler', 'Jordan', 'Ryan', 'Alice', 'Ireland'];
 */
 
 //Code Here
-
+for(let i = 0; i < family.length; i++){
+  console.log(family[i])
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -42,9 +51,13 @@ let evensArr = []
 */
 
 //Code Here
-
-
-
+for(let i = 0; i < nums.length; i++){
+  let x = nums[i]
+    if (x % 2 == 0){
+      evensArr.push(x)
+    }
+}
+  console.log(evensArr)
 ////////// PROBLEM 5 //////////
 
 // Do not edit the code below.
@@ -56,7 +69,17 @@ var score = 74
 */
 
 //Code Here
-
+if (score >= 90){
+console.log("A");
+} else if (score >= 80){
+  console.log("B")
+} else if (score >= 70){
+  console.log("C")
+} else if (score >= 60){
+  console.log("D")
+} else {
+  console.log("F")  
+}
 
 ////////// Intermediate Problems //////////
 
@@ -71,8 +94,8 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 */
 
 //Code Here
-
-
+let someNum = myFavoriteNumbers[4]
+console.log(someNum)
 ////////// PROBLEM 7 //////////
 
 // Subscripting (accessing values using their index) an array can fail. What happens if you subscript to the 7th element, but there are not 7 elements in the array? Let's write some code to check for that. 
@@ -80,7 +103,11 @@ var myFavoriteNumbers = [4,8,12,16,20,24];
 
 //Code Here
 
-
+if (myFavoriteNumbers.length < 7){
+  console.log("There are not enough numbers")
+} else {
+  someNum = myFavoriteNumbers[6]
+}
 ////////// PROBLEM 8 //////////
 
 // Do not edit the code below.
@@ -90,7 +117,12 @@ var listOfNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 // Use a for-loop to iterate through 'listOfNumbers', checking to see if each number is divisible by 3. If it is, console.log '{number} is divisible by 3.'
 
 //Code Here
-
+for (let i = 0; i < listOfNumbers.length; i++){
+  let number = listOfNumbers[i]
+  if (number % 3 === 0){
+    console.log(`${number} is divisible by 3`)
+  }
+}
 
 ////////// PROBLEM 9 //////////
 // Do not edit the code below.
@@ -102,6 +134,14 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 */
 
 //Code Here
+// for (let i = 5; i > 0; i--){
+//   console.log(i)
+// }
+
+for (let i = letters.length -1 ; i >= 0; i--){
+  console.log(letters[i])
+}
+
 
 
 ////////// Advanced Problems //////////
@@ -110,7 +150,7 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
 // Switch statements can be excellent alternatives to if blocks. Look up switch statements (I recommend W3 Schools) and try to implement one for the following.
 
 // Do not edit the code below.
-let letterGrade = 'B'
+let letterGrade = 'A'
 // Do not edit the code above.
 
 /* Use a switch statement on 'letterGrade' and console.log the appropriate response.
@@ -124,7 +164,25 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
 */
 
 //Code Here
-
+switch (letterGrade){
+  case "A":
+    console.log("The student is doing excellently.");
+    break;
+  case "B":
+    console.log("The student is doing well.");
+    break;
+  case "C":
+    console.log("The stundent is doing alright.");
+    break;
+  case "D":
+    console.log("The student is not doing very well.")
+    break;
+  case "F":
+    console.log("The student is failing");
+    break;
+  default:
+    console.log("not and eligible grade")
+}
 
 
 ////////// PROBLEM 11 //////////
@@ -151,4 +209,14 @@ If the letter grade is not one of the above letters, console.log 'Not an eligibl
   ...
 */
 
-//Code Here
+// Code Here
+for (let i = 1; i < 101; i++) {
+  if (i % 15 === 0)
+    console.log('Devmountain');
+  else if (i % 3 === 0)
+    console.log('Dev')
+  else if (i % 5 === 0)
+    console.log('Mountain')
+  else
+  console.log(i);
+} 
